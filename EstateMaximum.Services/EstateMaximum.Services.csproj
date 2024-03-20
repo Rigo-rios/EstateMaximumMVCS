@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Users\Identity\Pages\Account\Login.cshtml" />
+    <None Remove="Users\Identity\Pages\Account\Logout.cshtml" />
+    <None Remove="Users\Identity\Pages\Account\Register.cshtml" />
+    <None Remove="Users\Identity\Pages\Account\_ViewImports.cshtml" />
+    <None Remove="Users\Identity\Pages\_ValidationScriptsPartial.cshtml" />
+    <None Remove="Users\Identity\Pages\_ViewImports.cshtml" />
+    <None Remove="Users\Identity\Pages\_ViewStart.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Users\Identity\Pages\Account\Login.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Users\Identity\Pages\Account\Logout.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Users\Identity\Pages\Account\Register.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Users\Identity\Pages\Account\_ViewImports.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Users\Identity\Pages\_ValidationScriptsPartial.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Users\Identity\Pages\_ViewImports.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="Users\Identity\Pages\_ViewStart.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EstateMaximum.Data\EstateMaximum.Data.csproj" />
+    <ProjectReference Include="..\EstateMaximum.Models\EstateMaximum.Models.csproj" />
+  </ItemGroup>
+
+</Project>

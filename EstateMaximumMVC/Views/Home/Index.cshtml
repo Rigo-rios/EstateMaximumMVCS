@@ -1,0 +1,59 @@
+﻿@using EstateMaximum.Services.Houses
+@using EstateMaximum.Services.IServices
+@inject IHouseServices _houseService
+@{
+    ViewData["Title"] = "Home Page";
+    var house1 = await _houseService.DetailHouseAsync(12);
+    var house2 = await _houseService.DetailHouseAsync(16);
+    var house3 = await _houseService.DetailHouseAsync(17);
+}
+<body>
+<div class="text-center">
+    @* <h1 class="display-4">Welcome to Estate Maximum!</h1> *@
+@*     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+</div>
+
+
+    <div class="text-dark container-fluid" >
+        <h1 class="display-2 text-mod">Welcome to Estate Maximum!</h1>
+
+        <img class="container-fluid m-0 p-0" style="height:450px" src="https://proptitle.com/wp-content/uploads/2014/12/Fotolia_64249370_M.jpg"  />
+    </div> 
+
+<div class="row mt-2">
+    <div class="col-4">
+        <div class="card" style="width: 18rem;">
+            <img src="https://photos.zillowstatic.com/fp/12261cc5d05fd4aefbaa11667a569e05-cc_ft_960.webp" class="card-img-top" alt="...">
+            <div class="card-body align-content-left">
+                <h5 class="card-title"> @house1.Address -- $@house1.Price </h5>
+                <p class="card-text"> @house1.Description</p>
+                <a asp-controller="Houses" asp-action="Detail" asp-route-id="@house1.Id" class="btn btn-primary">Go to House</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card" style="width: 18rem;">
+            <img src="https://photos.zillowstatic.com/fp/ae5265b50eaa9b1e780eb35152d83744-cc_ft_960.webp" class="card-img-top" alt="...">
+            <div class="card-body align-content-center">
+                <h5 class="card-title"> @house2.Address -- $@house2.Price </h5>
+                <p class="card-text"> @house2.Description</p>
+                <a asp-controller="Houses" asp-action="Detail" asp-route-id="@house2.Id" class="btn btn-primary">Go to House</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card" style="width: 18rem;">
+            <img src="https://photos.zillowstatic.com/fp/97f313b865312d3cc795cf906c6af87e-cc_ft_576.webp" class="card-img-top" alt="...">
+            <div class="card-body alignalign-content-end">
+                <h5 class="card-title"> @house3.Address -- $@house3.Price  </h5>
+                <p class="card-text"> @house3.Description</p>
+                <a asp-controller="Houses" asp-action="Detail" asp-route-id="@house3.Id" class="btn btn-primary">Go To house</a>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+  
+
+</body>
